@@ -1,0 +1,9 @@
+html {
+    font: 21px Hevetica Neue, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: normal;
+}
