@@ -1,0 +1,34 @@
+<html ng-app="app" lang="en-GB" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> Battery Status </title>
+        <style>
+html {
+    font: 21px Hevetica Neue, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: normal;
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1> Battery Status </h1>
+        </header>
+        <main ng-controller="MainController as vm">
+            <p> Status:
+                <span ng-hide="vm.battery"> unavailable </span>
+                <span ng-show="vm.battery.charging"> charging </span>
+                <span ng-show="vm.battery &amp;&amp; !vm.battery.charging"> discharging </span>
+            </p>
+            <p> Level: {{ vm.battery.level | percent }} </p>
+            <p> Time until charged: {{ vm.battery.chargingTime | time }} </p>
+            <p> Time until discharged: {{ vm.battery.dischargingTime | time }}</p>
+        </main>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
