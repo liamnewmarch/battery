@@ -14,7 +14,7 @@
                 <span ng-show="vm.battery.charging"> charging </span>
                 <span ng-show="vm.battery &amp;&amp; !vm.battery.charging"> discharging </span>
             </p>
-            <p> Level: {{ vm.battery.level | percent }} </p>
+            <p> Level: <progress min="0" max="1" value="{{ vm.battery.level }}"></progress> {{ vm.battery.level | percent }} </p>
             <p> Time until charged: {{ vm.battery.chargingTime | time }} </p>
             <p> Time until discharged: {{ vm.battery.dischargingTime | time }}</p>
         </main>
