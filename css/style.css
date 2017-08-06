@@ -1,9 +1,28 @@
 html {
-    font: 21px Hevetica Neue, sans-serif;
+    font: 300 18px sans-serif;
     text-rendering: optimizeLegibility;
 }
 
+body {
+    max-width: 30rem;
+    margin: 5rem auto;
+    padding: 2rem;
+    box-shadow: 0 1px 3px silver;
+}
+
 h1 {
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: normal;
+    text-align: center;
+    margin: 0 0 2rem;
+}
+
+p {
+    display: flex;
+}
+
+p span,
+p progress {
+    flex: 1 0 auto;
+    margin: 0 .5rem;
 }
